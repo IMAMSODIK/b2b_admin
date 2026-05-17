@@ -315,7 +315,7 @@ export default function DevicesPage() {
             <div className="empty-state">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" strokeWidth="1.5" style={{ margin: "0 auto 12px", display: "block" }}><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
               <p style={{ fontWeight: 600, color: "#94a3b8", marginBottom: 4 }}>Belum ada perangkat</p>
-              <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>Klik "Refresh Daftar" untuk memuat perangkat yang sudah terdaftar.</p>
+              <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>Klik &quot;Refresh Daftar&quot; untuk memuat perangkat yang sudah terdaftar.</p>
               <button className="btn-secondary btn-sm" onClick={loadDevices} style={{ marginTop: 12 }}>Muat Perangkat</button>
             </div>
           </div>
