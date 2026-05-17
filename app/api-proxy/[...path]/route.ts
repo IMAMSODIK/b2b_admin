@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const BACKEND_BASE = process.env.SERVER_API_BASE || "http://localhost:8000";
+const BACKEND_BASE = process.env.SERVER_API_BASE || "https://iklanin.id";
 
 type RouteContext = { params: Promise<{ path: string[] }> };
 
