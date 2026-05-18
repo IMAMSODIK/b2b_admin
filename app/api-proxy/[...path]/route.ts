@@ -6,9 +6,17 @@ type RouteContext = { params: Promise<{ path: string[] }> };
 
 async function forward(request: NextRequest, context: RouteContext) {
   const { path } = await context.params;
-  const targetPath = path.join("/");
+
+  // HAPUS "api" pertama
+  const cleanPath =
+    path[0] === "api"
+      ? path.slice(1).join("/")
+      : path.join("/");
+
   const search = request.nextUrl.search || "";
-  const targetUrl = `${BACKEND_BASE.replace(/\/$/, "")}/${targetPath}${search}`;
+
+  const targetUrl =
+    `${BACKEND_BASE.replace(/\/$/, "")}/api/${cleanPath}${search}`;
 
   const headers = new Headers(request.headers);
   headers.delete("host");
